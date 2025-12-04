@@ -13,12 +13,21 @@ public class ReverseNumber {
 
             // 1. using algorithm
             int rev = 0;
-            while (num != 0) {
+/*            while (num != 0) {
                 rev = rev * 10 + num % 10;
                 num = num / 10;
-            }
+            }*/
+            //2. String buffer class method
+/*            StringBuffer sb = new StringBuffer(String.valueOf(num));
+            StringBuffer rv= sb.reverse();
+            int reve = Integer.parseInt(String.valueOf(rv));*/
 
-            System.out.println("Reverse number is :" + rev);
+            //3. String Builder
+            StringBuilder sb = new StringBuilder();
+            sb.append(num);
+            sb = sb.reverse();
+
+            System.out.println("Reverse number is :" + sb);
         }catch (InputMismatchException e){
             System.out.println(e.getStackTrace());
         }
